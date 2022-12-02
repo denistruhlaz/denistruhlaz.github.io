@@ -1,0 +1,15 @@
+@import '../abstracts/colors';
+
+.section {
+    &--red {
+        background-color: $red;
+    }
+
+    &--blue {
+        background-color: $blue;
+    }
+
+    &--white {
+        background-color: $white;
+    }
+}

@@ -1,0 +1,156 @@
+.map {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 2rem;
+
+
+    @media(max-width: 1200px) {
+        padding-left: 0;
+    }
+
+    &--sidebar {
+        flex: 1;
+
+        @media(max-width: 1200px) {
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 60px;
+        }
+    }
+
+    &--navigation {
+        display: flex;
+        flex-direction: column;
+
+        @media(max-width: 991px) {
+            padding-top: 50px;
+        }
+
+        &-item {
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: .3s;
+
+            @media(max-width: 991px) {
+                height: 60px;
+                width: 60px;
+
+                img {
+                    max-height: 30px;
+                }
+            }
+
+            &:nth-child(odd) {
+                background-color: #fff;
+
+                &:hover {
+                    background-color: $red;
+                }
+            }
+
+            &:nth-child(even) {
+                background-color: $red;
+
+                &:hover {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 1200px) {
+        flex-wrap: wrap;
+
+        &-siderbar {
+            order: 1;
+        }
+
+        &--wrapper {
+            order: 2;
+
+            highcharts-chart div {
+                width: 100% !important;
+            }
+        }
+    }
+
+
+    &--wrapper {
+        width: 100%;
+
+        @media(min-width: 700px) {
+            height: 850px;
+        }
+
+        div {
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+
+    &--title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        img {
+            @media(max-width: 767px) {
+                height: 60px;
+                width: 60px;
+            }
+
+            flex: 1;
+            padding-left: 30px;
+            padding-top: 30px;
+        }
+
+        h3 {
+            flex: 100;
+        }
+
+
+        &-web {
+            @media(max-width: 991px) {
+                display: none;
+            }
+        }
+
+        &-mobile {
+            width: 100%;
+            padding: 0;
+
+            img {
+                padding: 0;
+            }
+
+            @media(min-width: 992px) {
+                display: none;
+            }
+        }
+    }
+}
+
+text.highcharts-credits {
+    display: none;
+}
+
+image.highcharts-point {
+    transform: translate(-24px, -60px);
+    cursor: pointer;
+
+    @media(max-width: 665px) {
+        transform: translate(-10px, -29px);
+        height: 29px;
+        width: 22px;
+    }
+}
