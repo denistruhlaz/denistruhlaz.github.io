@@ -1,0 +1,161 @@
+$breakpointView: 1200px;
+
+.reports {
+    background-image: url("../../images/pozadina-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    max-height: 817px;
+    @media screen and (max-width: $breakpointView) {
+        background-size: cover;
+
+    }
+
+    &-section {
+        position: relative;
+        margin-top: -4px;
+    }
+
+    &--title-small {
+        max-width: calc(100vw - 860px);
+        margin: 0 auto;
+
+        @media screen and (max-width: $breakpointView) {
+            max-width: 100%;
+        }
+    }
+
+    &--flag {
+        position: absolute;
+        z-index: 2;
+        top: 0rem;
+        left: -90px;
+
+        &-web {
+            @media screen and (max-width: $breakpointView) {
+                display: none;
+            }
+        }
+
+        &-mobile {
+            left: auto;
+            right: 0;
+
+            @media screen and (min-width: $breakpointView) {
+                display: none;
+            }
+        }
+    }
+
+    &::after {
+        background: linear-gradient(180deg, rgba(22, 22, 22, 0.79) 0%, rgba(17, 17, 17, 0) 100%);
+        top: 50%;
+        height: 50%;
+        left: 0;
+        width: 100%;
+        content: "";
+        z-index: 0;
+        display: block;
+        position: absolute;
+        transform: rotate(180deg);
+        @media screen and (max-width: $breakpointView) {
+            top: 25%;
+            height: 75%;
+        }
+    }
+
+    &--content {
+        padding-top: 50vh;
+        padding-bottom: 4rem;
+        z-index: 2;
+        position: relative;
+
+        @media screen and (max-width: $breakpointView) {
+            padding-top: 20vh;
+        }
+    }
+
+    &--title {
+        font-size: 56px;
+        margin-bottom: 1.5rem;
+        line-height: 85%;
+    }
+
+    &--text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    &--city {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: $red;
+        background: #fff;
+        width: fit-content;
+        padding: 13px 30px;
+        margin-bottom: 1.5rem;
+    }
+
+    &--link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+        color: #fff;
+    }
+
+    &--icon {
+        position: absolute;
+        top: -85px;
+        z-index: 2;
+        left: 220px;
+        height: 220px;
+        width: 220px;
+        background: #D94339;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        @media screen and (max-width: $breakpointView) {
+            &-web {
+                display: none;
+            }
+
+            left: -10%;
+            height: 200px;
+            width: 200px;
+        }
+
+
+        &-mobile {
+            @media screen and (min-width: $breakpointView) {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        &--icon {
+            left: -10%;
+            height: 150px;
+            width: 150px;
+
+            img {
+                max-height: 80px;
+            }
+        }
+
+        &--flag-mobile {
+            height: 100px;
+        }
+
+        &-section {
+            padding: 4rem 0;
+        }
+    }
+}
