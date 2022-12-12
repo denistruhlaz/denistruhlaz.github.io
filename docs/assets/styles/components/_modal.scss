@@ -219,7 +219,9 @@
         width: 67.85px;
         height: 67.85px;
         top: calc(50% - 33px) !important;
-
+        @media (max-width: 991px) {
+            transform: scale(.75);
+        }
     }
 
     .swiper-button-prev {
@@ -279,7 +281,6 @@
                 line-height: 24px;
                 text-align: center;
                 color: #FFFFFF;
-                margin-bottom: 2rem;
             }
 
             .btn {

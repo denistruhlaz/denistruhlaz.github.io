@@ -33,13 +33,10 @@
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-  object-fit: cover;
   height: 100%;
-  @media (max-width: 992px) {
-    height: auto;
-    object-fit:initial;
-  }
+  height: auto;
+  object-fit:initial;
+  max-width: 100%;
 }
 
 .swiper-pagination-bullet{
