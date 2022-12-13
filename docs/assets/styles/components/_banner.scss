@@ -34,6 +34,30 @@
             left: 10vw;
         }
 
+
+        &-gift {
+            bottom: 25px;
+            right: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                max-height: 140px;
+            }
+
+            &-text {
+                max-width: 150px;
+                text-align: center;
+                background: #fff;
+                color: #2F3445;
+                padding: 30px 15px;
+                border-radius: 10px;
+                position: relative;
+                top: -10px;
+            }
+        }
+
         &-snowflake {
             top: 10vw;
             right: -1vw;
@@ -221,9 +245,9 @@
     }
 
 
- 
 
-    @media (orientation: landscape) and (min-width: 1600px){
+
+    @media (orientation: landscape) and (min-width: 1600px) {
         height: 100vh;
 
         video {
@@ -273,6 +297,7 @@
 
     @media (orientation: portrait) and (min-width: $bannerMobileMin) {
         height: 70vw;
+
         video {
             width: 100vw;
             object-fit: cover;
@@ -284,6 +309,7 @@
             z-index: -1;
             height: 100%;
         }
+
         &--circle {
             height: 80vw;
             width: 80vw;
